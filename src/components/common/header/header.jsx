@@ -4,9 +4,9 @@ import * as S from './header.styled';
 const Header = () => (
   <S.StyledHeader>
     <S.HeaderWrapper>
-      <S.Logo>
+      <S.LogoLink to="/">
         <S.Image src={logo} alt="Логотип Escape Room" width="134" height="50" />
-      </S.Logo>
+      </S.LogoLink>
 
       <S.Navigation>
         <S.Links>
