@@ -13,9 +13,7 @@ function NotFound () {
       <MainLayout>
         <main style={style}>
           <h1>
-            404.
-            <br />
-            <small>Page not found</small>
+            404 Page not found
           </h1>
           <Link to="/">Go to main page</Link>
           <img src="img/not-faund.jpg" alt="Not-faund" />
