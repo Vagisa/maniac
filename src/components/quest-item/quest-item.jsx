@@ -1,6 +1,6 @@
 import { ReactComponent as IconPerson } from 'assets/img/icon-person.svg';
 import { ReactComponent as IconPuzzle } from 'assets/img/icon-puzzle.svg';
-import { AppRoute } from 'const';
+import { AppRoute, levelDisplayName } from 'const';
 import * as S from './quest-item.styled';
 
 const QuestItem = ({quest}) => {
@@ -11,12 +11,6 @@ const QuestItem = ({quest}) => {
     level,
     peopleCount: [peopleCountFrom, peopleCountTo],
   } = quest;
-
-  const levelDisplayName = {
-    hard: 'сложный',
-    medium: 'средний',
-    easy: 'легкий',
-  };
 
   return (<S.QuestItem>
     <S.QuestItemLink to={AppRoute.QuestCard.replace(':id', id)}>

@@ -1,10 +1,10 @@
 import { APIRoute } from 'const';
-import { fillQuestsList, sendNewOrder, setQuest } from './actions';
+import { fillQuestsList, sendNewOrder, fillQuestItem } from './actions';
 
-export const fetchCurrentQuestAction = (questId) =>
+export const fetchQuestItemAction = (questId) =>
   async (dispatch, _getState, api) => {
     const {data} = await api.get(APIRoute.QuestCard + questId);
-    dispatch(setQuest(data));
+    dispatch(fillQuestItem(data));
   };
 
 export const fetchQuestsAction = () =>

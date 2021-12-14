@@ -1,8 +1,8 @@
 import { createAction } from '@reduxjs/toolkit';
 import { ActionType } from 'const';
 
-export const setQuest = createAction(
-  ActionType.SetQuest,
+export const fillQuestItem = createAction(
+  ActionType.FillQuestItem,
   (quest) => ({payload: quest}),
 );
 

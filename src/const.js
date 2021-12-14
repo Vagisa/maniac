@@ -20,7 +20,21 @@ export const Subjects = {
 };
 
 export const ActionType = {
-  SetQuest: 'setQuest',
+  FillQuestItem: 'fillQuestItem',
   FillQuestsList: 'fillQuestsList',
   SendNewOrder: 'sendNewOrder',
-}
+};
+
+export const levelDisplayName = {
+  hard: 'сложный',
+  medium: 'средний',
+  easy: 'легкий',
+};
+
+export const typeDisplayName = {
+  horror: 'ужасы',
+  mystic: 'мистика',
+  detective: 'детектив',
+  adventures: 'приключения',
+  sciFi: 'sci-fi',
+};
