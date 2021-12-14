@@ -17,6 +17,8 @@ const QuestsCatalog = () => {
   const quests = useSelector(getQuests);
   const [activeSubject, setActiveSubject] = useState(Subjects.AllQuests);
 
+  const questsFiltered = (activeSubject === Subjects.AllQuests) ? quests
+    : quests.filter((quest) => quest.type === activeSubject);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchQuestsAction());
@@ -26,51 +28,62 @@ const QuestsCatalog = () => {
   <>
     <S.Tabs>
       <S.TabItem>
-        <S.TabBtn onClick={() => setActiveSubject(Subjects.AllQuests)}>
+        <S.TabBtn
+          isActive={activeSubject===Subjects.AllQuests}
+          onClick={() => setActiveSubject(Subjects.AllQuests)}>
           <IconAllQuests />
           <S.TabTitle>Все квесты</S.TabTitle>
         </S.TabBtn>
       </S.TabItem>
 
       <S.TabItem>
-        <S.TabBtn onClick={() => setActiveSubject(Subjects.Adventure)}>
+        <S.TabBtn
+          isActive={activeSubject===Subjects.Adventures}
+          onClick={() => setActiveSubject(Subjects.Adventures)}>
           <IconAdventures />
           <S.TabTitle>Приключения</S.TabTitle>
         </S.TabBtn>
       </S.TabItem>
 
       <S.TabItem>
-        <S.TabBtn onClick={() => setActiveSubject(Subjects.Horror)}>
+        <S.TabBtn
+          isActive={activeSubject===Subjects.Horror}
+          onClick={() => setActiveSubject(Subjects.Horror)}>
           <IconHorrors />
           <S.TabTitle>Ужасы</S.TabTitle>
         </S.TabBtn>
       </S.TabItem>
 
       <S.TabItem>
-        <S.TabBtn onClick={() => setActiveSubject(Subjects.Mystery)}>
+        <S.TabBtn
+          isActive={activeSubject===Subjects.Mystic}
+          onClick={() => setActiveSubject(Subjects.Mystic)}>
           <IconMystic />
           <S.TabTitle>Мистика</S.TabTitle>
         </S.TabBtn>
       </S.TabItem>
 
       <S.TabItem>
-        <S.TabBtn onClick={() => setActiveSubject(Subjects.Detective)}>
+        <S.TabBtn
+          isActive={activeSubject===Subjects.Detective}
+          onClick={() => setActiveSubject(Subjects.Detective)}>
           <IconDetective />
           <S.TabTitle>Детектив</S.TabTitle>
         </S.TabBtn>
       </S.TabItem>
 
       <S.TabItem>
-        <S.TabBtn onClick={() => setActiveSubject(Subjects.SciFi)}>
+        <S.TabBtn
+          isActive={activeSubject===Subjects.SciFi}
+          onClick={() => setActiveSubject(Subjects.SciFi)}>
           <IconScifi />
           <S.TabTitle>Sci-fi</S.TabTitle>
         </S.TabBtn>
       </S.TabItem>
     </S.Tabs>
-    <h1>{activeSubject}</h1>
 
     <S.QuestsList >
-      {quests.slice().map((quest) => (
+      {questsFiltered.slice().map((quest) => (
         <QuestItem quest={quest} />
       ))}
     </S.QuestsList>

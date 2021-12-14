@@ -11,12 +11,12 @@ export const APIRoute = {
 }
 
 export const Subjects = {
-  AllQuests: 'All quests',
-  Adventure: 'Adventure',
-  Horror: 'Horror',
-  Mystery: 'Mystery',
-  Detective: 'Detective',
-  SciFi: 'Sci-fi',
+  AllQuests: 'all quests',
+  Adventures: 'adventures',
+  Horror: 'horror',
+  Mystic: 'mystic',
+  Detective: 'detective',
+  SciFi: 'sci-fi',
 };
 
 export const ActionType = {
