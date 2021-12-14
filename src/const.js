@@ -2,6 +2,7 @@ export const AppRoute = {
   Catalog: '/',
   QuestCard: '/detailed-quest/:id',
   Contacts: '/contacts',
+  ForBeginners: '/forBeginers',
 }
 
 export const APIRoute = {
@@ -17,6 +18,14 @@ export const Subjects = {
   Mystic: 'mystic',
   Detective: 'detective',
   SciFi: 'sci-fi',
+};
+
+export const Pages = {
+  Quests: 'КВЕСТЫ',
+  ForBeginners: 'НОВИЧКАМ',
+  Reviews: 'ОТЗЫВЫ',
+  Stock: 'АКЦИИ',
+  Contacts: 'КОНТАКТЫ',
 };
 
 export const ActionType = {
