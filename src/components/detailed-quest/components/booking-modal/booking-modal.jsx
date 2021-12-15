@@ -73,7 +73,7 @@ const BookingModal = ({onClose}) => {
             name="booking-people"
             placeholder="Количество участников"
             required
-            value={peopleCount}
+            value={peopleCount || ''}
           />
         </S.BookingField>
         <S.BookingSubmit type="submit">Отправить заявку</S.BookingSubmit>
