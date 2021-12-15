@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux';
 import { getQuest } from 'store/selectors';
 import { useDispatch } from 'react-redux';
 import { fetchQuestItemAction } from 'store/api-actions';
-import { levelDisplayName, typeDisplayName } from 'const';
+import { LevelDisplayName, TypeDisplayName } from 'const';
 import NotFound from 'components/not-found/not-found';
 import { useParams } from 'react-router';
 
@@ -54,7 +54,7 @@ const DetailedQuest = () => {
         <S.PageContentWrapper>
           <S.PageHeading>
             <S.PageTitle>{title}</S.PageTitle>
-            <S.PageSubtitle>{typeDisplayName[type]}</S.PageSubtitle>
+            <S.PageSubtitle>{TypeDisplayName[type]}</S.PageSubtitle>
           </S.PageHeading>
 
           <S.PageDescription>
@@ -69,7 +69,7 @@ const DetailedQuest = () => {
               </S.FeaturesItem>
               <S.FeaturesItem>
                 <IconPuzzle width="24" height="24" />
-                <S.FeatureTitle>{levelDisplayName[level]}</S.FeatureTitle>
+                <S.FeatureTitle>{LevelDisplayName[level]}</S.FeatureTitle>
               </S.FeaturesItem>
             </S.Features>
 

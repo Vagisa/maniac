@@ -1,6 +1,6 @@
 import { ReactComponent as IconPerson } from 'assets/img/icon-person.svg';
 import { ReactComponent as IconPuzzle } from 'assets/img/icon-puzzle.svg';
-import { AppRoute, levelDisplayName } from 'const';
+import { AppRoute, LevelDisplayName } from 'const';
 import * as S from './quest-item.styled';
 
 const QuestItem = ({quest}) => {
@@ -32,7 +32,7 @@ const QuestItem = ({quest}) => {
             </S.QuestFeatureItem>
             <S.QuestFeatureItem>
               <IconPuzzle />
-              {levelDisplayName[level]}
+              {LevelDisplayName[level]}
             </S.QuestFeatureItem>
           </S.QuestFeatures>
         </S.QuestContent>

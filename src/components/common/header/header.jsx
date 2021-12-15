@@ -1,5 +1,5 @@
 import logo from 'assets/img/logo.svg';
-import { AppRoute, Pages } from 'const';
+import { AppRoute } from 'const';
 import { useLocation } from 'react-router-dom';
 import * as S from './header.styled';
 
