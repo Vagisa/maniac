@@ -83,7 +83,8 @@ const DetailedQuest = () => {
           </S.PageDescription>
         </S.PageContentWrapper>
 
-        {isBookingModalOpened && <BookingModal />}
+        {isBookingModalOpened &&
+        <BookingModal onClose={() => setIsBookingModalOpened(false)}/>}
       </S.Main>
     </MainLayout>
   );

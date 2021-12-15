@@ -30,7 +30,6 @@ function Map() {
   return (
     <ContactsMapDiv
       ref={mapRef}
-      data-testid="Map"
     />
   );
 };

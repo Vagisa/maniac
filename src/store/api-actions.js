@@ -13,10 +13,8 @@ export const fetchQuestsAction = () =>
     dispatch(fillQuestsList(data));
   };
 
-export const sendNewOrderAction = () =>
+export const sendNewOrderAction = ({name, peopleCount, phone, isLegal}) =>
   async (dispatch, _getState, api) => {
-    const {data} = await api.post(APIRoute.Orders);
+    const {data} = await api.post(APIRoute.Orders, {name, peopleCount, phone, isLegal});
     dispatch(sendNewOrder(data));
   };
-
-
