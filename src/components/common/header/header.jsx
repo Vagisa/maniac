@@ -22,19 +22,25 @@ const Header = () => {
           </S.LinkItem>
 
           <S.LinkItem>
-            <S.Link to="#">
+            <S.Link
+              $isActiveLink={location.pathname===AppRoute.ForBeginners}
+              to={AppRoute.ForBeginners}>
               Новичкам
             </S.Link>
           </S.LinkItem>
 
           <S.LinkItem>
-            <S.Link to="#">
+            <S.Link
+              $isActiveLink={location.pathname===AppRoute.Reviews}
+              to={AppRoute.Reviews}>
               Отзывы
             </S.Link>
           </S.LinkItem>
 
           <S.LinkItem>
-            <S.Link to="#">
+            <S.Link
+              $isActiveLink={location.pathname===AppRoute.Stock}
+              to={AppRoute.Stock}>
               Акции
             </S.Link>
           </S.LinkItem>

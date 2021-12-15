@@ -3,6 +3,8 @@ export const AppRoute = {
   QuestCard: '/detailed-quest/:id',
   Contacts: '/contacts',
   ForBeginners: '/forBeginers',
+  Reviews: '/reviews',
+  Stock: '/stock',
 }
 
 export const APIRoute = {
