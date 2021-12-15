@@ -1,7 +1,7 @@
 import leaflet from 'leaflet';
 import { useEffect, useRef } from 'react';
 import useMap from './use-map';
-import pin from 'assets/img/icon-location.svg';
+import pin from 'assets/img/icon-pin.svg';
 import { ContactsMapDiv } from './map.styled';
 import { Location } from 'const';
 
@@ -11,8 +11,8 @@ function Map() {
 
   const currentCustomIcon = leaflet.icon({
     iconUrl: pin,
-    iconSize: [27, 39],
-    iconAnchor: [13.5, 39],
+    iconSize: [47.58, 61.06],
+    iconAnchor: [23.79, 61.06],
   });
 
   useEffect(() => {
