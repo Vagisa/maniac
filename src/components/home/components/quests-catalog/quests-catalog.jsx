@@ -84,7 +84,7 @@ const QuestsCatalog = () => {
 
     <S.QuestsList >
       {questsFiltered.slice().map((quest) => (
-        <QuestItem quest={quest} />
+        <QuestItem key={quest.id} quest={quest} />
       ))}
     </S.QuestsList>
   </>
